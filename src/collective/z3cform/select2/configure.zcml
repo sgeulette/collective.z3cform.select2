@@ -7,10 +7,13 @@
 
   <i18n:registerTranslations directory="locales" />
 
-  <includeDependencies package="." />
+  <include package="z3c.form" file="meta.zcml" />
+  <include package="z3c.form" />
+  <include package="eea.facetednavigation" />
+  <include package="eea.jquery" />
 
   <include package=".browser" />
-
+  <include package=".widget" />
 
   <genericsetup:registerProfile
       name="default"
@@ -19,12 +22,5 @@
       description="Installs the collective.z3cform.select2 add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-
-  <genericsetup:importStep
-      name="collective.z3cform.select2-postInstall"
-      title="collective.z3cform.select2 post_install import step"
-      description="Post install import step from collective.z3cform.select2"
-      handler=".setuphandlers.post_install">
-  </genericsetup:importStep>
 
 </configure>

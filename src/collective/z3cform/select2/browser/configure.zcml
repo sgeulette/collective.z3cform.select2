@@ -1,20 +1,14 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
-    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:faceted="http://namespaces.zope.org/faceted"
     i18n_domain="collective.z3cform.select2">
 
-  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
-  <include package="z3c.jbot" file="meta.zcml" />
-  <browser:jbot
-      directory="overrides"
-      layer="collective.z3cform.select2.interfaces.ICollectiveZ3CformSelect2Layer"
-      />
+  <browser:resource
+    name="faceted.select2.view.js"
+    file="./templates/select2-view.js"
+   />
 
-  <!-- Publish static files -->
-  <browser:resourceDirectory
-      name="collective.z3cform.select2"
-      directory="static"
-      />
+  <faceted:widget factory=".select2widget.Widget" />
 
 </configure>

@@ -43,9 +43,11 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'plone.api',
         'setuptools',
-        'z3c.jbot',
+        'plone.api',
+        'eea.facetednavigation',
+        'eea.jquery',
+        'z3c.form',
     ],
     extras_require={
         'test': [
@@ -55,7 +57,5 @@ setup(
         ],
     },
     entry_points="""
-    [z3c.autoinclude.plugin]
-    target = plone
     """,
 )
