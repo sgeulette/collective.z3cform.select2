@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.select.widget import Widget as SelectWidget
 from eea.faceted.vocabularies.utils import compare
