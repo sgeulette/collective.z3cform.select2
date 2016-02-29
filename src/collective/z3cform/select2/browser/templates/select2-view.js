@@ -1,59 +1,57 @@
-Faceted.taxonomySeparator = " » ";
+Faceted.taxonomySeparator = ' » ';
+Faceted.taxonomyAllString = ' (tous)';
 
-Faceted.initSelect2 = function() {
-    jQuery('.select2').each(function(i, elem) {
-        var options = {'children': {}};
-        jQuery.map(jQuery(elem).find('option'), function(option, index) {
-            var parts = option.title.split(Faceted.taxonomySeparator);
-            var current = options;
-            for(var j=0;j<parts.length;j++) {
-                if(!current.children[parts[j]]) {
-                    current.children[parts[j]] = {children:{}};
-                }
-                current = current.children[parts[j]];
-            }
-            current.value = option.value;
-            current.title = parts[parts.length-1];
-            if(option.selected) {
-                current.selected = true;
-            }
-        });
-        jQuery(elem).find('option').remove();
-        var html = '';
-        function create_options(sub_option, depth) {
-            var selected = '';
-            if(sub_option.selected) selected = ' selected="selected"';
-            if(Object.keys(sub_option.children).length>0) {
-                html += '<optgroup class="depth-'+depth+'" label="'+sub_option.title+'">';
-                html += '<option title="'+sub_option.title+'" value="'+sub_option.value+'"'+selected+'>'+sub_option.title+' (tous)</option>';
-                for(var child in sub_option.children) {
-                    create_options(sub_option.children[child], depth + 1);
-                }
-                html += '</optgroup>';
-            } else {
-                if(sub_option.value) {
-                    html += '<option title="'+sub_option.title+'" value="'+sub_option.value+'"'+selected+'>'+sub_option.title+'</option>';
-                }
-            }
-        }
-        for(var child in options.children) {
-            create_options(options.children[child], 0);
-        }
-        jQuery(elem).append(html);
-        // dirty way to make sure eea widget is initialized
-        setTimeout(function() {
-            jQuery(elem).select2();
-            jQuery('button[data-select2-open]').click(function(){
-                jQuery('#' + jQuery(this).data('select2-open')).select2('open');
-            });
-        }, 500);
-    });
+Faceted.initSelect2 = function(select) {
+  if (select.hasClass('init-select2-done')) {
+    return;
+  }
+  var options = {'children': {}};
+  jQuery.map(select.find('option'), function(option, index) {
+    var parts = option.title.split(Faceted.taxonomySeparator);
+    var current = options;
+    for(var j=0; j<parts.length; j++) {
+      if(!current.children[parts[j]]) {
+        current.children[parts[j]] = {children: {}};
+      }
+      current = current.children[parts[j]];
+    }
+    current.value = option.value;
+    current.title = parts[parts.length-1];
+    if(option.selected) {
+      current.selected = true;
+    }
+  });
+  select.find('option').remove();
+  var html = '';
+  function create_options(sub_option, depth) {
+    var selected = '';
+    if(sub_option.selected) {
+      selected = ' selected="selected"';
+    }
+    if (Object.keys(sub_option.children).length > 0) {
+      html += '<optgroup class="depth-' + depth + '" label="' + sub_option.title + '">';
+      html += '<option title="' + sub_option.title + '" value="' + sub_option.value + '"' + selected + '>' + sub_option.title + Faceted.taxonomyAllString + '</option>';
+      for(var child in sub_option.children) {
+        create_options(sub_option.children[child], depth + 1);
+      }
+      html += '</optgroup>';
+    } else {
+      if(sub_option.value) {
+        html += '<option title="' + sub_option.title + '" value="' + sub_option.value + '"' + selected + '>' + sub_option.title + '</option>';
+      }
+    }
+  }
+  for (var child in options.children) {
+    create_options(options.children[child], 0);
+  }
+  select.append(html);
+  select.select2();
+  select.siblings('button[data-select2-open]').click(function(){
+    jQuery('#' + jQuery(this).data('select2-open')).select2('open');
+  });
+  select.siblings('.select2-container')[0].style.minWidth = '200px';
+  select.addClass('init-select2-done')
 };
-
-jQuery(document).ready(function() {
-  Faceted.initSelect2();
-  // jQuery('button[data-select2-open]').hide();
-});
 
 /* Select Widget
 */
@@ -109,6 +107,7 @@ Faceted.Select2Widget = function(wid){
       js_widget.count(sortcountable);
     });
   }
+  Faceted.initSelect2(this.select);
 };
 
 Faceted.Select2Widget.prototype = {
