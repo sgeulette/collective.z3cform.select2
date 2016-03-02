@@ -45,6 +45,8 @@ Faceted.initSelect2 = function(select) {
     create_options(options.children[child], 0);
   }
   select.append(html);
+  // select2 doesn't seem to like '-' in the id...
+  // you get the error "TypeError: b[0] is undefined"
   select.select2();
   select.siblings('button[data-select2-open]').click(function(){
     jQuery('#' + jQuery(this).data('select2-open')).select2('open');
@@ -55,7 +57,10 @@ Faceted.initSelect2 = function(select) {
 
 
 jQuery(document).ready(function() {
-  jQuery('.z3cform-select2').each(function(i, elem) {
+  // very important to have 'select' in the selector to avoid
+  // error "uncaught exception: query function not defined for Select2 someid"
+  // when it actually process a div.z3cform-select2
+  jQuery('select.z3cform-select2').each(function(i, elem) {
     Faceted.initSelect2($(elem));
   });
   // jQuery('button[data-select2-open]').hide();

@@ -6,7 +6,7 @@
       <i class="fa fa-search"></i>
     </button>
     <select id="" name="" class="" tabindex="" disabled="" multiple="multiple" size=""
-            tal:attributes="id view/id;
+            tal:attributes="id python:view.id.replace('-', '');
                             name string:${view/name}:list;
                             class python:view.klass+' select2-container select2-container-multi select2 z3cform-select2';
                             style view/style;
