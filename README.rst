@@ -15,7 +15,8 @@ Features
 - select2 multivalued z3c.form widget that works nice with 2-level vocabulary
   created with collective.taxonomy
 - Upon installation, the default zc3form widget for List/Set of Choice will be
-  select2 based.
+  select2 based. If you don't want this behavior, you can exclude
+  collective.z3cform.select2.widget adapters.zcml with z3c.unconfigure.
 
 
 Theming
@@ -27,6 +28,11 @@ If your site doesn't have a bootstrap based theme, you may want to add this
 css rule to your project to hide the tiny button::
 
     button[data-select2-open] { display: none; }
+
+The z3cform widget in display mode uses the badge class, without a comma
+separator so it may be confusing when you don't have style for the badge class.
+You can revert to a comma separated display by including minimal.zcml instead
+of configure.zcml, see Installation below.
 
 
 Translations
@@ -48,6 +54,7 @@ Install collective.z3cform.select2 by adding it to your buildout::
         collective.z3cform.select2
     zcml =
         collective.z3cform.select2
+        # or collective.z3cform.select2-minimal
 
 
 and then running ``bin/buildout``

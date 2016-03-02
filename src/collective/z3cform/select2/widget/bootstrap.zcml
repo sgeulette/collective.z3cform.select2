@@ -3,20 +3,11 @@
     xmlns:z3c="http://namespaces.zope.org/z3c"
     i18n_domain="z3c.form">
 
-  <include file="adapters.zcml" />
-
-  <class class=".widget.TaxonomySelect2Widget">
-    <require
-        permission="zope.Public"
-        interface=".widget.ITaxonomySelect2Widget"
-        />
-  </class>
-
   <z3c:widgetTemplate
-      mode="input"
+      mode="display"
       widget=".widget.ITaxonomySelect2Widget"
       layer="z3c.form.interfaces.IFormLayer"
-      template="widget_input.pt"
+      template="widget_display.pt"
       />
 
 </configure>
