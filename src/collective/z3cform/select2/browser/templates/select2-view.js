@@ -55,7 +55,9 @@ Faceted.initSelect2 = function(select) {
 
 
 jQuery(document).ready(function() {
-  jQuery('.select2').each(function(i, elem) { Faceted.initSelect2($(elem)) });
+  jQuery('.z3cform-select2').each(function(i, elem) {
+    Faceted.initSelect2($(elem));
+  });
   // jQuery('button[data-select2-open]').hide();
 });
 

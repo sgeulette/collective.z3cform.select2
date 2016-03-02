@@ -8,7 +8,7 @@
     <select id="" name="" class="" tabindex="" disabled="" multiple="multiple" size=""
             tal:attributes="id view/id;
                             name string:${view/name}:list;
-                            class python:view.klass+' select2-container select2-container-multi select2';
+                            class python:view.klass+' select2-container select2-container-multi select2 z3cform-select2';
                             style view/style;
                             title view/title;
                             lang view/lang;
