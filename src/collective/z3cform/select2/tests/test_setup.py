@@ -26,7 +26,8 @@ class TestSetup(unittest.TestCase):
         from collective.z3cform.select2.interfaces import (
             ICollectiveZ3CformSelect2Layer)
         from plone.browserlayer import utils
-        self.assertIn(ICollectiveZ3CformSelect2Layer, utils.registered_layers())
+        self.assertIn(ICollectiveZ3CformSelect2Layer,
+                      utils.registered_layers())
 
 
 class TestUninstall(unittest.TestCase):
