@@ -18,6 +18,17 @@ Features
 - Upon installation, the default zc3form widget for List/Set of Choice will be select2 based.
 
 
+Theming
+-------
+
+The widget was developped initially for a bootstrap 3 theme and fontawesome.
+There is a search button icon left to the select that upon click open the select.
+If your site doesn't have a bootstrap based theme, you may want to add this
+css rule to your project to hide the tiny button::
+
+    button[data-select2-open] { display: none; }
+
+
 Translations
 ------------
 
