@@ -7,6 +7,22 @@ collective.z3cform.select2
 ==========================
 
 EXPERIMENTAL. This is a work in progress.
+There is still a javascript issue with the zc3form widget.
+
+Features
+--------
+
+- select2 facetednavigation widget for 2-level vocabulary created with collective.taxonomy
+  Select "Select2" criteria in facetednavigation and select a taxonomy.
+- select2 z3c.form widget that works nice with 2-level vocabulary created with collective.taxonomy
+- Upon installation, the default zc3form widget for List/Set of Choice will be select2 based.
+
+
+Translations
+------------
+
+- One constant Faceted.taxonomyAllString currently in French.
+
 
 Installation
 ------------

@@ -53,6 +53,13 @@ Faceted.initSelect2 = function(select) {
   select.addClass('init-select2-done')
 };
 
+
+jQuery(document).ready(function() {
+  jQuery('.select2').each(function(i, elem) { Faceted.initSelect2($(elem)) });
+  // jQuery('button[data-select2-open]').hide();
+});
+
+
 /* Select Widget
 */
 Faceted.Select2Widget = function(wid){

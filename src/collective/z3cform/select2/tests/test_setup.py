@@ -21,6 +21,13 @@ class TestSetup(unittest.TestCase):
         self.assertTrue(self.installer.isProductInstalled(
             'collective.z3cform.select2'))
 
+    def test_browserlayer(self):
+        """Test that ICollectiveZ3CformSelect2Layer is registered."""
+        from collective.z3cform.select2.interfaces import (
+            ICollectiveZ3CformSelect2Layer)
+        from plone.browserlayer import utils
+        self.assertIn(ICollectiveZ3CformSelect2Layer, utils.registered_layers())
+
 
 class TestUninstall(unittest.TestCase):
 

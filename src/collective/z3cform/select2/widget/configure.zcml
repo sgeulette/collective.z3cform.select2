@@ -10,6 +10,27 @@
         />
   </class>
 
+  <adapter
+      factory=".widget.TaxonomySelect2FieldWidget"
+      for="zope.schema.interfaces.IList
+           zope.schema.interfaces.IChoice
+           collective.z3cform.select2.interfaces.ICollectiveZ3CformSelect2Layer"
+      />
+
+  <adapter
+      factory=".widget.TaxonomySelect2FieldWidget"
+      for="zope.schema.interfaces.ITuple
+           zope.schema.interfaces.IChoice
+           collective.z3cform.select2.interfaces.ICollectiveZ3CformSelect2Layer"
+      />
+
+  <adapter
+      factory=".widget.TaxonomySelect2FieldWidget"
+      for="zope.schema.interfaces.IUnorderedCollection
+           zope.schema.interfaces.IChoice
+           collective.z3cform.select2.interfaces.ICollectiveZ3CformSelect2Layer"
+      />
+
   <z3c:widgetTemplate
       mode="display"
       widget=".widget.ITaxonomySelect2Widget"

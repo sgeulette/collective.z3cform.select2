@@ -16,10 +16,12 @@ class TaxonomySelect2Widget(SelectWidget):
     implements(ITaxonomySelect2Widget, interfaces.ISelectWidget)
 
     noValueToken = ''
+    size = 5
 
 
 @adapter(zope.schema.interfaces.ISequence, interfaces.IFormLayer)
 @implementer(interfaces.IFieldWidget)
-def TaxonomySelect2FieldWidget(field, request):
+def TaxonomySelect2FieldWidget(field, value_type, request): #pylint: disable=W0613
     """IFieldWidget factory for SelectWidget."""
     return FieldWidget(field, TaxonomySelect2Widget(request))
+
