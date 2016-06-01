@@ -5,6 +5,9 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Depends on eea.jquery >= 8.8 to fix images in select2.
+  [vincentfretin]
+
 - Replace collective.taxonomy.widget.TaxonomySelectFieldWidget by the widget
   from this package.
   [vincentfretin]

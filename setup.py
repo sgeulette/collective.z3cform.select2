@@ -46,7 +46,7 @@ setup(
         'setuptools',
         'plone.api',
         'eea.facetednavigation',
-        'eea.jquery',
+        'eea.jquery >= 8.8',
         'z3c.form',
     ],
     extras_require={
