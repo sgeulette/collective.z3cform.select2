@@ -5,6 +5,10 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Replace collective.taxonomy.widget.TaxonomySelectFieldWidget by the widget
+  from this package.
+  [vincentfretin]
+
 - Initialize widgets in overlays now.
   [vincentfretin]
 
