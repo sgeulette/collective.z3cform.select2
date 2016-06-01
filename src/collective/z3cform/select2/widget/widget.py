@@ -25,6 +25,7 @@ def TaxonomySelect2FieldWidget(field, value_type, request):
     """IFieldWidget factory for SelectWidget."""
     return FieldWidget(field, TaxonomySelect2Widget(request))
 
+
 @adapter(zope.schema.interfaces.ISequence, interfaces.IFormLayer)
 @implementer(interfaces.IFieldWidget)
 def PatchedTaxonomySelectFieldWidget(field, request):
