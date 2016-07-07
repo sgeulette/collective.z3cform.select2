@@ -26,6 +26,7 @@
            collective.z3cform.select2.interfaces.ICollectiveZ3CformSelect2Layer"
       />
 
+  <include package="collective.monkeypatcher" />
   <monkey:patch zcml:condition="installed collective.taxonomy"
       description="Replace collective.taxonomy.widget.TaxonomySelectFieldWidget by colective.z3cform.select2.widget.widget.PatchedTaxonomySelectFieldWidget"
       module="collective.taxonomy.widget"
