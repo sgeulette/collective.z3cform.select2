@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1 (unreleased)
+1.1 (2016-07-07)
 ----------------
 
 - Use faceted-select2-widget instead of faceted-select-widget to not break
