@@ -1,11 +1,11 @@
-<div class="faceted-widget faceted-select-widget" style="display: none"
+<div class="faceted-widget faceted-select2-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
   sortcountable python:view.sortcountable;
-  css string:faceted-widget faceted-select-widget;
+  css string:faceted-widget faceted-select2-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
   css python:sortcountable and css + ' faceted-sortcountable' or css;

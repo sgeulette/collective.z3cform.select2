@@ -296,7 +296,7 @@ Faceted.Select2Widget.prototype = {
 };
 
 Faceted.initializeSelect2Widget = function(evt){
-  jQuery('div.faceted-select-widget').each(function(){
+  jQuery('div.faceted-select2-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];
     Faceted.Widgets[wid] = new Faceted.Select2Widget(wid);

@@ -5,6 +5,10 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Use faceted-select2-widget instead of faceted-select-widget to not break
+  the original faceted-select-widget widget.
+  [vincentfretin]
+
 - Depends on eea.jquery >= 8.8 to fix images in select2.
   [vincentfretin]
 
