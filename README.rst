@@ -60,7 +60,7 @@ Install collective.z3cform.select2 by adding it to your buildout::
 and then running ``bin/buildout``
 
 You need to install the collective.z3cform.select2 addon to register the
-select2 js library.
+select2 js library. In a facetednav, add a Select2 criterion.
 
 
 Contribute
