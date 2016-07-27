@@ -5,7 +5,11 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Avoid an error if Faceted namespace is not defined
+  [mpeeters]
+
+- Add a select2 single select widget
+  [mpeeters]
 
 
 1.1 (2016-07-07)
