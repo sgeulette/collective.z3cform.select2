@@ -12,4 +12,10 @@ jQuery(document).ready(function($) {
       escapeMarkup: function(m) { return m; },
   });
 
+  $('.multi-select2-widget').select2({
+    formatResult: format,
+    formatSelection: format,
+    escapeMarkup: function(m) { return m; },
+  });
+
 });

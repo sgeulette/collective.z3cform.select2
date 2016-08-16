@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from zope.interface import Interface, implements, implementer
 from zope.component import adapter
+
 import zope.schema.interfaces
 
 from z3c.form import interfaces
@@ -67,3 +68,23 @@ class SingleSelect2Widget(SelectWidget):
 def SingleSelect2FieldWidget(field, request):
     """IFieldWidget factory for SingleSelect2Widget"""
     return FieldWidget(field, SingleSelect2Widget(request))
+
+
+class IMultiSelect2Widget(Interface):
+    """Marker interface for multi select2 widget"""
+
+
+class MultiSelect2Widget(SingleSelect2Widget):
+    implements(IMultiSelect2Widget, interfaces.ISelectWidget)
+    klass = u'multi-select2-widget'
+
+    def items(self):
+        items = super(MultiSelect2Widget, self).items()
+        return [i for i in items if i['value'] != '--NOVALUE--']
+
+
+@adapter(zope.schema.interfaces.ISequence, interfaces.IFormLayer)
+@implementer(interfaces.IFieldWidget)
+def MultiSelect2FieldWidget(field, request):
+    """IFieldWidget factory for MultiSelect2Widget"""
+    return FieldWidget(field, MultiSelect2Widget(request))

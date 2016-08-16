@@ -33,4 +33,18 @@
       template="single_select2_input.pt"
       />
 
+  <class class=".widget.MultiSelect2Widget">
+    <require
+        permission="zope.Public"
+        interface=".widget.IMultiSelect2Widget"
+        />
+  </class>
+
+  <z3c:widgetTemplate
+      mode="input"
+      widget=".widget.IMultiSelect2Widget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="multi_select2_input.pt"
+      />
+
 </configure>
