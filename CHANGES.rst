@@ -8,7 +8,7 @@ Changelog
 - Avoid an error if Faceted namespace is not defined
   [mpeeters]
 
-- Add a select2 single select widget
+- Add a select2 single and multi select widget
   [mpeeters]
 
 
