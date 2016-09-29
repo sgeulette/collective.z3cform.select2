@@ -5,7 +5,8 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fix widget in overlays.
+  [cedricmessiant]
 
 
 1.2 (2016-08-25)
