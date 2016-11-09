@@ -5,6 +5,9 @@ Changelog
 1.3 (unreleased)
 ----------------
 
+- Remove specific css rules that was introduced in 1.2
+  [vincentfretin]
+
 - Fix widget in overlays.
   [cedricmessiant]
 
