@@ -8,7 +8,8 @@ Changelog
 - Remove specific css rules that was introduced in 1.2
   [vincentfretin]
 
-- Fix widget in overlays.
+- Fix widget in overlays. If you upgrade from 1.1, you need to reinstall
+  the profile to add a css in portal_css.
   [cedricmessiant]
 
 
