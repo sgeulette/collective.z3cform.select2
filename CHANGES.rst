@@ -12,6 +12,12 @@ Changelog
   the profile to add a css in portal_css.
   [cedricmessiant]
 
+- Wrap call to select2 initialization in JS function `initializeSelect2Widgets`
+  so it is easy to call from everywhere (like in an overlay initialization).
+  Parameter width can be specified when calling `initializeSelect2Widgets`
+  and defaults to `resolve`.
+  [gbastien]
+
 
 1.2 (2016-08-25)
 ----------------
