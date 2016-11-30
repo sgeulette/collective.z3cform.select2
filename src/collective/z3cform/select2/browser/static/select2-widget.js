@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+initializeSelect2Widgets = function(width='resolve') {
 
   var format = function(state) {
       var option = $(state.element);
@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
   };
 
   $('.single-select2-widget').select2({
-      width: 'resolve',
+      width: width,
       formatResult: format,
       formatSelection: format,
       escapeMarkup: function(m) { return m; },
@@ -18,4 +18,6 @@ jQuery(document).ready(function($) {
     escapeMarkup: function(m) { return m; },
   });
 
-});
+};
+
+jQuery(document).ready(initializeSelect2Widgets);
