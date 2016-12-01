@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3 (unreleased)
+1.3 (2016-12-01)
 ----------------
 
 - Remove specific css rules that was introduced in 1.2
