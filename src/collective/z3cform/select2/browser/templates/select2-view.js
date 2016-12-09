@@ -219,7 +219,7 @@ if (typeof(Faceted) != 'undefined') {
 
       var widget = this;
       var html = jQuery('<dd>');
-      var span = jQuery('<span class="facted-select-criterion">');
+      var span = jQuery('<span class="faceted-select-criterion">');
       html.attr('id', 'criteria_' + this.wid + '_entries');
       var element = jQuery(this.selected);
       var value = element.val();

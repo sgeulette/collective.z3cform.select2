@@ -5,7 +5,8 @@ Changelog
 1.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Rename wrong class facted-select-criterion to faceted-select-criterion
+  [vincentfretin]
 
 
 1.3 (2016-12-01)
