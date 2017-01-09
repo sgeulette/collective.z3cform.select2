@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3.2 (unreleased)
+1.3.2 (2017-01-09)
 ------------------
 
 - Don't use default param feature in select2-widget.js, this is ES6, IE 10
