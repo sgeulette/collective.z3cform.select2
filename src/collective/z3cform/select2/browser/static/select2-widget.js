@@ -1,21 +1,24 @@
-var initializeSelect2SingleWidget = function(obj, width='resolve') {
+var initializeSelect2SingleWidget = function(obj, width) {
+  if (typeof width === "undefined") {
+      width = 'resolve';
+  }
 
   var format = function(state) {
       var option = $(state.element);
       return '<span class="' + option.data('css') + '">' + state.text + '</span>';
   };
 
-  $(obj).select2({
+  jQuery(obj).select2({
       width: width,
       formatResult: format,
       formatSelection: format,
-      escapeMarkup: function(m) { return m; },
+      escapeMarkup: function(m) { return m; }
   });
 };
 
 initializeSelect2Widgets = function(width='resolve') {
 
-  $('.single-select2-widget').each(function() {
+  jQuery('.single-select2-widget').each(function() {
     initializeSelect2SingleWidget($(this), width=width);
   });
 
