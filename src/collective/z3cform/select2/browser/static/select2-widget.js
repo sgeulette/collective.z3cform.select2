@@ -16,7 +16,10 @@ var initializeSelect2SingleWidget = function(obj, width) {
   });
 };
 
-initializeSelect2Widgets = function(width='resolve') {
+initializeSelect2Widgets = function(width) {
+  if (typeof width === "undefined") {
+      width = 'resolve';
+  }
 
   jQuery('.single-select2-widget').each(function() {
     initializeSelect2SingleWidget($(this), width=width);
