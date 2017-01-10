@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3.3 (unreleased)
+1.3.3 (2017-01-10)
 ------------------
 
 - Don't use default param feature in select2-widget.js, the previous fix
