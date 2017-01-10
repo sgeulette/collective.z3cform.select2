@@ -5,7 +5,9 @@ Changelog
 1.3.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix widget in overlays when loading a form in an existing overlay.
+  This worked before 1.3, but another overlay fix in 1.3 broke this case.
+  [vincentfretin]
 
 
 1.3.3 (2017-01-10)

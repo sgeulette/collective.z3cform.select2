@@ -64,6 +64,11 @@ if (typeof(Faceted) != 'undefined') {
     jQuery('select.z3cform-select2').each(function(i, elem) {
       Faceted.initSelect2($(elem));
     });
+    jQuery(document).on('formOverlayLoadSuccess', function(e, req, myform, api, pb, ajax_parent) {
+      jQuery('select.z3cform-select2').each(function(i, elem) {
+        Faceted.initSelect2($(elem));
+      });
+    });
     jQuery(document).on('loadInsideOverlay', function(e, el, responseText, errorText, api) {
       jQuery('select.z3cform-select2').each(function(i, elem) {
         Faceted.initSelect2($(elem));
