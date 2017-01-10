@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3.4 (unreleased)
+1.3.4 (2017-01-10)
 ------------------
 
 - Fix widget in overlays when loading a form in an existing overlay.
