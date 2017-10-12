@@ -5,7 +5,8 @@ Changelog
 1.3.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Restore initialization for multi select2 widgets
+  [mpeeters]
 
 
 1.3.4 (2017-01-10)

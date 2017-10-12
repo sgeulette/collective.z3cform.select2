@@ -25,6 +25,10 @@ initializeSelect2Widgets = function(width) {
     initializeSelect2SingleWidget($(this), width=width);
   });
 
+  jQuery('.multi-select2-widget').each(function() {
+    initializeSelect2SingleWidget($(this), width=width);
+  });
+
 };
 
 jQuery(document).ready(initializeSelect2Widgets);
