@@ -5,6 +5,9 @@ Changelog
 1.3.5 (unreleased)
 ------------------
 
+- Fix an issue with the width of hidden elements (e.g. in tabs)
+  [mpeeters]
+
 - Restore initialization for multi select2 widgets
   [mpeeters]
 

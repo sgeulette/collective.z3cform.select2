@@ -22,11 +22,19 @@ initializeSelect2Widgets = function(width) {
   }
 
   jQuery('.single-select2-widget').each(function() {
-    initializeSelect2SingleWidget($(this), width=width);
+    if (jQuery(this).is(':visible') == true) {
+      initializeSelect2SingleWidget($(this), width=width);
+    } else {
+      initializeSelect2SingleWidget($(this), width='20em');
+    }
   });
 
   jQuery('.multi-select2-widget').each(function() {
-    initializeSelect2SingleWidget($(this), width=width);
+    if (jQuery(this).is(':visible') == true) {
+      initializeSelect2SingleWidget($(this), width=width);
+    } else {
+      initializeSelect2SingleWidget($(this), width='20em');
+    }
   });
 
 };
