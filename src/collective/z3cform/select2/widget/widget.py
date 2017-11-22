@@ -50,8 +50,9 @@ class SingleSelect2Widget(SelectWidget):
     def select2_id(self):
         return self.id.replace('-', '_')
 
+    @property
     def items(self):
-        items = super(SingleSelect2Widget, self).items()
+        items = super(SingleSelect2Widget, self).items
         for item in items:
             css = ''
             css_id = item.get('value').split('_-_')
