@@ -19,7 +19,7 @@ long_description = (
 
 setup(
     name='collective.z3cform.select2',
-    version='1.3.5.dev0',
+    version='1.4.0.dev0',
     description="select2 widget for z3c.form and eea.facetednavigation",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
