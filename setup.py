@@ -47,7 +47,7 @@ setup(
         'plone.api',
         'eea.facetednavigation < 10.0',
         'eea.jquery >= 8.8',
-        'z3c.form',
+        'z3c.form >= 3.2.11',
     ],
     extras_require={
         'test': [
