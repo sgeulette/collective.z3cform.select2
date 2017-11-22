@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.4.0 (unreleased)
+1.4.0 (2017-11-22)
 ------------------
 
 - Fix an issue with the width of hidden elements (e.g. in tabs)
