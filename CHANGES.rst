@@ -11,8 +11,8 @@ Changelog
 - Restore initialization for multi select2 widgets
   [mpeeters]
 
-- Do code compatible with `z3c.form >= 3.2.11` where the `SelectWidget.items`
-  is a `@property` and no more a callable method.
+- Require `z3c.form >= 3.2.11` where the `SelectWidget.items` is a `@property`
+  and no more a callable method.
   [gbastien]
 
 
