@@ -79,9 +79,11 @@ class MultiSelect2Widget(SingleSelect2Widget):
     implements(IMultiSelect2Widget, interfaces.ISelectWidget)
     klass = u'multi-select2-widget'
 
+    @property
     def items(self):
-        items = super(MultiSelect2Widget, self).items()
-        return [i for i in items if i['value'] != '--NOVALUE--']
+        items = super(MultiSelect2Widget, self).items
+        # self.noValueToken is '--NOVALUE--'
+        return [i for i in items if i['value'] != self.noValueToken]
 
 
 @adapter(zope.schema.interfaces.ISequence, interfaces.IFormLayer)

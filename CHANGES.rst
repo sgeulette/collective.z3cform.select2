@@ -5,7 +5,10 @@ Changelog
 1.4.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed `MultiSelect2Widget` to use a `@property` for `items` as it is the case
+  for `SingleSelect2Widget.items` it is inheriting from (that was fixed in
+  release 1.4.0).
+  [gbastien]
 
 
 1.4.0 (2017-11-22)
