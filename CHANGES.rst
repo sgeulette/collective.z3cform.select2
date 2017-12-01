@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.4.1 (unreleased)
+1.4.1 (2017-12-01)
 ------------------
 
 - Fixed `MultiSelect2Widget` to use a `@property` for `items` as it is the case
