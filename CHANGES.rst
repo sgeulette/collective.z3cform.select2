@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.1 (unreleased)
+2.0.1 (2018-08-27)
 ------------------
 
 - Do not replace z3cform default widget for List/Set of Choice by
