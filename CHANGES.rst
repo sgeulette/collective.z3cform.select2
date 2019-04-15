@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-2.0.2 (unreleased)
+3.0.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Upgrade to Plone 5
+  [mpeeters]
 
 
 2.0.1 (2018-08-27)
