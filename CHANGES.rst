@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-3.0.0 (unreleased)
-------------------
+3.0.0b1 (2019-04-16)
+--------------------
 
 - Upgrade to Plone 5
   [mpeeters]
