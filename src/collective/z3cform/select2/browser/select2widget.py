@@ -3,7 +3,7 @@ from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.select.widget import Widget as SelectWidget
 from eea.facetednavigation.widgets.select.interfaces import ISelectSchema
 
-from eea.faceted.vocabularies.utils import compare
+from eea.faceted.vocabularies.utils import lowercase_text
 
 from zope.i18n import MessageFactory
 
@@ -45,7 +45,7 @@ class Widget(SelectWidget):
             return False
 
         for item in default:
-            if compare(key, item) == 0:
+            if lowercase_text(key, item) == 0:
                 return True
 
         return False
