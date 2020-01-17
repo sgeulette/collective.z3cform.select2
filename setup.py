@@ -46,6 +46,7 @@ setup(
         'setuptools',
         'plone.api',
         'eea.facetednavigation>=10.0',
+        'eea.faceted.vocabularies>=6.7',
         'z3c.form >= 3.2.11',
     ],
     extras_require={

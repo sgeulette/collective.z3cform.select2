@@ -5,7 +5,9 @@ Changelog
 2.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Make widget compatible with the latest versions of eea.faceted.vocabularies
+  This makes it no more compatible with eea.faceted.vocabularies < 6.7
+  [mpeeters]
 
 
 2.0.1 (2018-08-27)
