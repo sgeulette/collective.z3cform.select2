@@ -5,6 +5,9 @@ Changelog
 3.0.0b2 (unreleased)
 --------------------
 
+- Use implementer instead of implements for python3 compatibility.
+  [bsuttor]
+
 - Make widget compatible with the latest versions of eea.faceted.vocabularies
   This makes it no more compatible with eea.faceted.vocabularies < 6.7
   [mpeeters]

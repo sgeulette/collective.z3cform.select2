@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from zope.interface import Interface, implements, implementer
+from zope.interface import Interface, implementer
 from zope.component import adapter
 
 import zope.schema.interfaces
@@ -13,10 +13,10 @@ class ITaxonomySelect2Widget(Interface):
     """ Marker interface for the taxonomy select widget """
 
 
+@implementer(ITaxonomySelect2Widget, interfaces.ISelectWidget)
 class TaxonomySelect2Widget(SelectWidget):
-    implements(ITaxonomySelect2Widget, interfaces.ISelectWidget)
 
-    noValueToken = ''
+    noValueToken = ""
     size = 5
 
 
@@ -38,9 +38,9 @@ class ISingleSelect2Widget(Interface):
     """Marker interface for single select widget"""
 
 
+@implementer(ISingleSelect2Widget, interfaces.ISelectWidget)
 class SingleSelect2Widget(SelectWidget):
-    implements(ISingleSelect2Widget, interfaces.ISelectWidget)
-    klass = u'single-select2-widget'
+    klass = u"single-select2-widget"
 
     @property
     def placeholder(self):
@@ -48,19 +48,19 @@ class SingleSelect2Widget(SelectWidget):
 
     @property
     def select2_id(self):
-        return self.id.replace('-', '_')
+        return self.id.replace("-", "_")
 
     @property
     def items(self):
         items = super(SingleSelect2Widget, self).items
         for item in items:
-            css = ''
-            css_id = item.get('value').split('_-_')
+            css = ""
+            css_id = item.get("value").split("_-_")
             if len(css_id) > 3:
-                css = 'subcategory '
+                css = "subcategory "
                 css_id = css_id[:3]
-            css = '{0}{1}'.format(css, '-'.join(css_id))
-            item['css'] = css
+            css = "{0}{1}".format(css, "-".join(css_id))
+            item["css"] = css
         return items
 
 
@@ -75,15 +75,15 @@ class IMultiSelect2Widget(Interface):
     """Marker interface for multi select2 widget"""
 
 
+@implementer(IMultiSelect2Widget, interfaces.ISelectWidget)
 class MultiSelect2Widget(SingleSelect2Widget):
-    implements(IMultiSelect2Widget, interfaces.ISelectWidget)
-    klass = u'multi-select2-widget'
+    klass = u"multi-select2-widget"
 
     @property
     def items(self):
         items = super(MultiSelect2Widget, self).items
         # self.noValueToken is '--NOVALUE--'
-        return [i for i in items if i['value'] != self.noValueToken]
+        return [i for i in items if i["value"] != self.noValueToken]
 
 
 @adapter(zope.schema.interfaces.ISequence, interfaces.IFormLayer)
