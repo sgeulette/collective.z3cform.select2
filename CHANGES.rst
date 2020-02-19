@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.0b2 (unreleased)
+3.0.0b2 (2020-02-19)
 --------------------
 
 - Use implementer instead of implements for python3 compatibility.
