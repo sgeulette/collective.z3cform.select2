@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.2 (unreleased)
+2.1.0 (2020-06-08)
 ------------------
 
 - Make widget compatible with the latest versions of eea.faceted.vocabularies
