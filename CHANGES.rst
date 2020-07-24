@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.0b3 (unreleased)
+3.0.0b3 (2020-07-24)
 --------------------
 
 - Fix initialization of select2 widget on view mode
