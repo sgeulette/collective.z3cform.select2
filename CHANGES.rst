@@ -5,7 +5,8 @@ Changelog
 3.0.0b3 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix initialization of select2 widget on view mode
+  [mpeeters]
 
 
 3.0.0b2 (2020-02-19)
