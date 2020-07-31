@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.0b4 (unreleased)
+3.0.0b4 (2020-07-31)
 --------------------
 
 - Fix last compilation date format for registry resource
