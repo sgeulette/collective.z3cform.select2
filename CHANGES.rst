@@ -5,7 +5,8 @@ Changelog
 3.0.0b4 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix last compilation date format for registry resource
+  [mpeeters]
 
 
 3.0.0b3 (2020-07-24)
