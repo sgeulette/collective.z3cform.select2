@@ -5,8 +5,13 @@ from zope.component import adapter
 import zope.schema.interfaces
 
 from z3c.form import interfaces
-from z3c.form.browser.select import SelectWidget
 from z3c.form.widget import FieldWidget
+
+try:
+    # use provided select 2 widget if available
+    from plone.app.z3cform.widget import SelectWidget
+except ImportError:
+    from z3c.form.browser.select import SelectWidget
 
 
 class ITaxonomySelect2Widget(Interface):

@@ -5,6 +5,9 @@ Changelog
 3.0.0b5 (unreleased)
 --------------------
 
+- Use `plone.app.z3cform` provided select2 widget if available
+  [laulaz]
+
 - Add uninstall profile
   [laulaz]
 
