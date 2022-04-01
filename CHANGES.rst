@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.0b5 (unreleased)
+3.0.0b5 (2022-04-01)
 --------------------
 
 - Use `plone.app.z3cform` provided select2 widget if available
