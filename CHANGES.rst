@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.0b6 (unreleased)
+3.0.0b6 (2022-08-17)
 --------------------
 
 - Remove dependency on obsolete `eea.faceted.vocabularies`
