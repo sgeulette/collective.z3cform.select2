@@ -5,7 +5,8 @@ Changelog
 3.0.0b6 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Remove dependency on obsolete `eea.faceted.vocabularies`
+  [laulaz]
 
 
 3.0.0b5 (2022-04-01)
