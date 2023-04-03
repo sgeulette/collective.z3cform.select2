@@ -21,7 +21,7 @@ initializeSelect2Widgets = function(width) {
       width = 'resolve';
   }
 
-  jQuery('.single-select2-widget').each(function() {
+  jQuery('select.single-select2-widget').each(function() {
     if (jQuery(this).is(':visible') == true) {
       initializeSelect2SingleWidget($(this), width=width);
     } else {
@@ -29,7 +29,7 @@ initializeSelect2Widgets = function(width) {
     }
   });
 
-  jQuery('.multi-select2-widget').each(function() {
+  jQuery('select.multi-select2-widget').each(function() {
     if (jQuery(this).is(':visible') == true) {
       initializeSelect2SingleWidget($(this), width=width);
     } else {

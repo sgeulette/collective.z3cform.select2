@@ -5,8 +5,8 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Be more specific in select2 js selector to avoid error in view.
+  [sgeulette]
 
 2.1.0 (2020-06-08)
 ------------------
